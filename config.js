@@ -5,7 +5,7 @@ module.exports = {
 
     PORT: process.env.PORT,
     BLOCKFROST_PROJECTID: process.env.BLOCKFROST_PROJECTID,
-    
-    BLOCKFROST_HOST: 'https://cardano-mainnet.blockfrost.io/api/v0/'
+
+    JWT_SECRET: process.env.JWT_SECRET
 
 }
