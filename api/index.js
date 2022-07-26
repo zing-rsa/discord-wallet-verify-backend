@@ -4,6 +4,7 @@ const cors = require('cors');
 
 router.use(express.json());
 router.use(cors({
+    origin: '*',
     exposedHeaders: ['authorization']
 }));
 
