@@ -19,7 +19,7 @@ const upsertUser = async (details, userid) => {
         if (!valid)
             throw new Error('Invalid signature');
 
-        let writeResult = await users.updateOne(
+        await users.updateOne(
             { userid: userid },
             {
                 '$set': {

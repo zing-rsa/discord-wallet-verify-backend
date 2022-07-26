@@ -4,7 +4,6 @@ module.exports = {
     USER_COL_NAME: 'users',
 
     PORT: process.env.PORT,
-    BLOCKFROST_PROJECTID: process.env.BLOCKFROST_PROJECTID,
 
     JWT_SECRET: process.env.JWT_SECRET
 

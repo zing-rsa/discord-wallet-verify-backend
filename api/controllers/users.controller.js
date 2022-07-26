@@ -21,7 +21,7 @@ async function walletRegister (req, res) {
         const { error, value } = schema.validate(req.body, { escapeHtml: true });
         if (error) throw new ValidationError(error.details[0].message);
 
-        UserService.upsertUser(value, userid);
+        await UserService.upsertUser(value, userid);
         return res.status(200).json({ message: 'Wallet registered' });
     } catch (e) {
         if (e instanceof ValidationError) {
