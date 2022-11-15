@@ -16,7 +16,7 @@ async function walletRegister (req, res) {
 
     try {
 
-        const userid = req.userid;
+        const userid = req.userId;
 
         const { error, value } = schema.validate(req.body, { escapeHtml: true });
         if (error) throw new ValidationError(error.details[0].message);

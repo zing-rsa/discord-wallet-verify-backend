@@ -9,9 +9,11 @@ const authenticate = async (req, res, next) => {
     }
   
     try {
-      const userid = (jwt.verify(token, JWT_SECRET)).userid;
-  
-      req.userid = userid;
+      const data = jwt.verify(token, JWT_SECRET)
+
+      req.userId = data.u;
+      req.guildId = data.g;
+      req.configId = data.cid;
       
       next();
     } catch (e) {
